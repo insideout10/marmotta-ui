@@ -1,0 +1,76 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset/utilities";
+@import "compass/css3";
+@import "compass/utilities";
+
+body, html {
+  height:100%;
+}
+
+body {
+	padding-top: 40px;
+
+	.menu-level-1 {
+		&.navbar .navbar-inner .container {
+			margin-left: 0px;
+
+			.brand {
+				background-image: url(../images/marmotta-logo-neg.png);
+				height: 40px;
+				width: 120px;
+				background-size: contain;
+				margin-left: 12px;
+				padding: 0;
+				background-repeat: no-repeat;
+			}
+		}
+	}
+
+	.menu-level-2, .menu-level-3 {
+		position: fixed;
+	}
+
+	.menu-level-2 {
+		z-index: 1020;
+		margin-left: -20px;
+		padding-right: 0px;
+	}
+
+	.menu-level-3 {
+		z-index: 1010;
+		width: 100%;
+		margin-left: -40px;
+
+		div {
+			width: 100%;
+
+			&>ul {
+				width: 100%;
+				padding-left: 20px;
+				background: white;
+			}
+		}
+	}
+
+	.row.content {
+		margin-top: 58px;
+	}
+
+	.square-corners {
+		@include border-radius(0px);
+	}
+
+	.full-height {
+		height: 100%;
+	}
+
+	.nav-tabs.square-corners>li>a {
+		@include border-radius(0px);
+	}
+
+}
+

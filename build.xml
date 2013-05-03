@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<project name="marmotta-ui" default="css">
+    <property name="builddir" value="{phing.dir}/build" override="true" />
+    <property name="testdir" value="src/test" override="true" />
+
+    <property name="wwwdir" value="{phing.dir}/var/www" override="true" />
+    <property name="maindir" value="${project.basedir}/src/main" override="true" />
+    <property name="sassdir" value="${maindir}" override="true" />
+    <property name="coffeedir" value="${maindir}/coffee" override="true" />
+    <property name="jsdir" value="${maindir}/js" override="true" />
+
+	<target name="css">
+		<echo msg="Creating stylesheets in ${sassdir}..." />
+		<exec command="compass compile" dir="${sassdir}" />
+	</target>
+
+</project>
